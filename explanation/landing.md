@@ -1,14 +1,14 @@
 (explanation)=
 # Explanation
 
-- {ref}`cryptography`
+* {ref}`cryptography`
 
-🚧 Under construction 🚧
+
 
 ```{toctree}
 :titlesonly:
 :maxdepth: 1
 :hidden:
 
-cryptography/index
+cryptography/landing
 ```

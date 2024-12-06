@@ -1,4 +1,4 @@
-(howtos)=
+(howto)=
 # How-to guides
 
 (howto-getstarted)=
@@ -24,6 +24,6 @@ cluster to the [Canonical Observability Stack](https://charmhub.io/topics/canoni
 :maxdepth: 1
 :hidden:
 
-getting-started/index
-observability/index
+getting-started/landing
+observability/landing
 ```

@@ -1,5 +1,4 @@
 (first-steps)=
-
 # First steps with Charmed HPC
 
 ```{note}

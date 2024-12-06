@@ -28,13 +28,13 @@ Charmed HPC on [GitHub](https://github.com/orgs/charmed-hpc/discussions/new?cate
 
 ````{grid} 1 1 2 2
 
-```{grid-item-card} [Tutorial](tutorial/first-steps)
+```{grid-item-card} [Tutorial](tutorial/landing)
 
 __Start here__: a hands-on introduction to Charmed HPC for new users, guiding you through
 your {ref}`first-steps`
 ```
 
-```{grid-item-card} [How-to guides](howto/index)
+```{grid-item-card} [How-to guides](howto/landing)
 
 __Step-by-step guides__ covering key operations and common tasks
 
@@ -47,7 +47,7 @@ __Step-by-step guides__ covering key operations and common tasks
 
 ````{grid} 1 1 2 2
 
-```{grid-item-card} [Explanation](explanation/index)
+```{grid-item-card} [Explanation](explanation/landing)
 
 __Discussion and clarification__ of key topics
 
@@ -56,7 +56,7 @@ __Discussion and clarification__ of key topics
 ```
 
 
-```{grid-item-card} [Reference](reference/index)
+```{grid-item-card} [Reference](reference/landing)
 
 __Technical information__
 
@@ -85,13 +85,15 @@ Here's some links to help you get started with joining the community:
 * [Get the latest news on Discourse](https://discourse.ubuntu.com/c/hpc/151)
 * [Ask and answer questions on GitHub](https://github.com/orgs/charmed-hpc/discussions/categories/q-a)
 
-```{filtered-toctree}
+
+
+```{toctree}
 :hidden:
-:titlesonly:
 
 self
-Tutorial <tutorial/first-steps>
-howto/index
-explanation/index
-reference/index
+tutorial/landing
+howto/landing
+explanation/landing
+reference/landing
+reference/release-notes/release-notes
 ```

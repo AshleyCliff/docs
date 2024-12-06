@@ -1,3 +1,4 @@
+(observability)=
 # Observability
 
 See the how-to guides in this section for how to connect your Charmed HPC
