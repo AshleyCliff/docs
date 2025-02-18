@@ -5,9 +5,10 @@
 
 # Pre-submission quick check
 
- * [ ] Description of changes are provided, especially for complex or involved processes/updates.
+ * [ ] A description of changes is provided, especially for complex or involved processes/updates.
  * [ ] [Conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) are used.
  * [ ] I read and followed the CONTRIBUTING guidelines.
+ * [ ] I have noted any corresponding issues or discussions.
 
 
 ## Docs
