@@ -2,9 +2,9 @@
 
 # Pre-submission checklist
 
- * [ ] A description of changes is provided, especially for complex or involved processes/updates.
  * [ ] I read and followed the CONTRIBUTING guidelines.
- * [ ] I have noted any corresponding issues or discussions.
+ * [ ] A summary of changes is provided.
+ * [ ] I have identified issues or discussions related to this pull request and have linked them here.
 
 
 ## Docs
