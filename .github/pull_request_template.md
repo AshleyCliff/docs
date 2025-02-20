@@ -1,6 +1,6 @@
 
 
-# Pre-submission quick check
+# Pre-submission checklist
 
  * [ ] A description of changes is provided, especially for complex or involved processes/updates.
  * [ ] I read and followed the CONTRIBUTING guidelines.
