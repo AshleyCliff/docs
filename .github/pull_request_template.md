@@ -5,7 +5,7 @@
  * [ ] I read and followed the CONTRIBUTING guidelines.
  * [ ] A summary of changes is provided.
  * [ ] I have identified issues or discussions related to this pull request and have linked them here.
- * [ ] I have insured that <the CI actions> complete successfully.
+ * [ ] I have insured that </the CI actions/> complete successfully.
 
 
 ## Docs
