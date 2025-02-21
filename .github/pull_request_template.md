@@ -3,9 +3,20 @@
 # Pre-submission checklist
 
  * [ ] I read and followed the CONTRIBUTING guidelines.
- * [ ] A summary of changes is provided.
- * [ ] I have identified issues or discussions related to this pull request and have linked them here.
  * [ ] I have insured that lint, typecheck, and unit tests complete successfully.
+
+[//]: # (If you can't run the tests locally, create a draft PR to check against the CI pipeline. Once you verify that CI is passing, you can take your PR out of draft status. Please try running the tests locally first, before testing against the CI pipeline.)
+
+
+## Summary of Changes
+
+
+
+
+#### Related Issues, PRs, and Discussions
+
+[//]: # (Please link to related issues, pull requests, and discussions here. If there are no related issues, PRs, or discussions, please provide a justification for the PR.)
+
 
 
 ## Docs
@@ -15,3 +26,4 @@
 Or:
 
 * [ ] I confirm the pull request has no implications for documentation, with justification in the description.
+
