@@ -25,5 +25,5 @@
 
 Or:
 
-* [ ] I confirm the pull request has no implications for documentation, with justification in the description.
+* [ ] I confirm the pull request has no implications for documentation, with justification included the summary of changes.
 
