@@ -258,7 +258,10 @@ extensions = [
     "sphinx.ext.intersphinx",
     "canonical.config-options",
     "canonical.filtered-toc",
+    "sphinxcontrib.mermaid",
 ]
+
+mermaid_params = ['--backgroundColor', 'white','--theme','forest','--width','2000']
 
 custom_required_modules = [
     "sphinx-remove-toctrees",

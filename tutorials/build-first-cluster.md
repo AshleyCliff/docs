@@ -5,9 +5,9 @@
 
 <!-- Goal: Get a new potential user familiar with the various tools used for Charmed HPC, and build a basic cluster that feels recognizable by the end. Show how Charmed HPC provides a turn-key cluster smoothly and why its worth using. -->
 
-In this tutorial we will build a small Charmed HPC cluster, submit a job to the new batch queue, and view the job and cluster status metrics. By the end of this tutorial, we will have worked with Multipass, Juju and Charms, Kubernetes, the Canonical Observability Stack (COS), and Slurm.
+In this tutorial we will build a small Charmed HPC cluster, submit a variety of jobs to the new batch queue. By the end of this tutorial, we will have worked with Multipass, Juju and Charms, and Slurm.
 
-This tutorial expects that you have some familiarity with classic high-performance computing concepts and programs, but does not expect any prior experience with Juju, Kubernetes, COS, or prior experience launching a Slurm cluster.
+This tutorial expects that you have some familiarity with classic high performance computing concepts and programs, but does not expect any prior experience with Juju or prior experience launching a Slurm cluster.
 
 <!-- How long should this tutorial take to complete? -->
 
@@ -66,18 +66,34 @@ recoverable_errors: {}
 `juju clouds` should show...
  -->
 
+<!-- config: mermaid_params=['--backgroundColor', 'white']
+
+align: left
+ -->
+
+:::{mermaid}
+---
+
+---
+
+architecture-beta
+  group vm(cloud)[charmed hpc vm]
+  group lxd(cloud)[localhost lxd] in vm
+
+  service controller(database)[controller] in lxd
+:::
+
+
 ## Deploy Slurm and file system
 
-Next, we will deploy Slurm as the resource management and job scheduling service.
-
-First create the `slurm` model that will hold the
+Now that we've got an active vm sandbox environment and cloud, we will deploy Slurm as the resource management and job scheduling service. First create the `slurm` model that will hold the
 deployment in our cloud `localhost`:
 
 :::{code-block} shell
 juju add-model slurm localhost
 :::
 
-Then deploy the Slurm management daemon `slurmctld`, the Slurm compute node daemon with partition name 'tutorial-partition' and two nodes, the authentication and credential kiosk daemon `sackd`:
+Then deploy the Slurm management daemon `slurmctld`, the Slurm compute node daemon with partition name 'tutorial-partition' and two nodes, and the authentication and credential kiosk daemon `sackd`:
 
 :::{code-block} shell
 juju deploy slurmctld --base "ubuntu@24.04" --channel "edge" --constraints="virt-type=virtual-machine"
