@@ -262,6 +262,7 @@ extensions = [
 ]
 
 mermaid_params = ['--backgroundColor', 'white','--theme','forest','--width','2000']
+mermaid_verbose = True
 
 custom_required_modules = [
     "sphinx-remove-toctrees",
