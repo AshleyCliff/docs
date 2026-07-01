@@ -71,6 +71,7 @@ Now, from the local directory holding the cloud-init file, launch a virtual mach
 
 [charmed-hpc-tutorial-cloud-init.yml]: /reuse/tutorial/charmed-hpc-tutorial-cloud-init.yml
 
+<!-- SPREAD SKIP -->
 :::{code-block} shell
 multipass launch 24.04 \
   --name charmed-hpc-tutorial \
@@ -94,6 +95,7 @@ successfully initialized:
 :::{code-block} shell
 cloud-init status --long
 :::
+<!-- SPREAD SKIP END -->
 
 The output of `cloud-init status`{l=shell} will be similar to the following:
 
@@ -187,7 +189,7 @@ juju add-storage microceph/0 osd-standalone=loop,2G,3
 :::
 
 Then, use `juju integrate`{l=shell} to integrate the filesystem components
-together aqnd with Slurm:
+together and with Slurm:
 
 :::{code-block} shell
 juju integrate scratch ceph-fs
@@ -195,6 +197,10 @@ juju integrate ceph-fs microceph
 juju integrate scratch tutorial-partition
 juju integrate scratch sackd
 :::
+
+<!-- SPREAD
+juju status --wait=5m
+-->
 
 Your Charmed HPC cluster will become active within a few minutes. The output of the
 `juju status`{l=shell} will be similar to the following:
@@ -315,6 +321,10 @@ Now, submit your batch job to the queue using `sbatch`{l=shell}:
 sbatch submit_hello.sh
 :::
 
+<!-- SPREAD
+exit
+-->
+
 Your job will complete after a few seconds. The generated _output.txt_ file will look
 similar to the following:
 
@@ -357,6 +367,10 @@ juju integrate apptainer slurmctld
 juju integrate apptainer sackd
 juju integrate apptainer tutorial-partition
 :::
+
+<!-- SPREAD
+juju status --wait=5m
+-->
 
 After a few minutes, the output `juju status` will look similar to the following:
 
@@ -465,6 +479,10 @@ build the bar plot:
 sbatch submit_apptainer_mascot.sh
 :::
 
+<!-- SPREAD
+exit
+-->
+
 To view the status of the job while it is running, run `squeue`.
 
 Once the job has completed, view the generated bar plot that will look
@@ -504,9 +522,11 @@ Now that you have completed the tutorial, if you would like to completely remove
 virtual machine, return to your local terminal and `multipass delete` the virtual
 machine as follows:
 
+<!-- SPREAD SKIP -->
 :::{code-block} shell
 multipass delete --purge charmed-hpc-tutorial
 :::
+<!-- SPREAD SKIP END -->
 
 ## Next steps
 
