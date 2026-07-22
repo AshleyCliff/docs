@@ -6,11 +6,34 @@ Charmed HPC is a platform for managing high-performance computing clusters. It a
 
 ## In this documentation
 
-- __Learn more about Charmed HPC:__ [Getting Started tutorial](tutorial-getting-started-with-charmed-hpc), [Underlying projects](reference/underlying-projects-and-dependencies.md)
-- __Workload management:__ [Deploy Slurm](howto/deploy/deploy-slurm.md), [Manage Slurm](howto/manage/manage-slurm.md), [Clean up Slurm](howto/cleanup/cleanup-slurm.md), [Grafana Dashboards](reference/monitoring/grafana-dashboards.md)
-- __Storage and Resources:__ [Deploy shared filesystem](howto/deploy/deploy-shared-filesystem.md), [GPUs](explanation/gpus.md), [GRES](reference/gpus.md), [Interconnects](explanation/interconnects.md)
-- __Security and Identity:__ [Deploy identity provider](howto/deploy/deploy-identity-provider.md), [Hardening guidelines](reference/hardening.md), [Cryptography](explanation/cryptography.md)
-- __Performance:__ [High availability](explanation/high-availability.md), [Benchmarks](reference/performance.md)
+### Point of Entry
+
+- __Getting started:__ [Getting Started tutorial](tutorial-getting-started-with-charmed-hpc)
+
+### Lifecycle
+
+- __Provision and deploy:__ [Initialize cloud environment](howto/initialize-cloud-environment.md), [Deploy Slurm](howto/deploy/deploy-slurm.md), [Deploy shared filesystem](howto/deploy/deploy-shared-filesystem.md)
+- __Manage and operate:__ [Manage Slurm](howto/manage/manage-slurm.md)
+- __Decommission and clean up:__ [Clean up Slurm](howto/cleanup/cleanup-slurm.md), [Clean up cloud resources](howto/cleanup/cleanup-cloud-resources.md)
+
+### Stack layers and core machinery
+
+- __Architecture and foundations:__ [Underlying projects](reference/underlying-projects-and-dependencies.md)
+- __Running workloads:__ [Use Apptainer](howto/run-workloads/use-apptainer.md), [Integrate with Apptainer](howto/integrate/integrate-with-apptainer.md)
+- __Hardware:__ [GPUs](explanation/gpus.md), [GRES](reference/gpus.md), [Interconnects](explanation/interconnects.md), [Public cloud interconnects](reference/interconnects.md)
+
+### Performance and Quality
+
+- __Identity and access:__ [Deploy identity provider](howto/deploy/deploy-identity-provider.md)
+- __Observability and monitoring:__ [Integrate with COS](howto/integrate/integrate-with-cos.md), [Integrate with InfluxDB](howto/integrate/integrate-with-influxdb.md), [Integrate with a mail server](howto/integrate/integrate-with-email.md), [Email notifications for jobs](explanation/job-email-notifications.md), [Grafana dashboards](reference/monitoring/grafana-dashboards.md), [Prometheus alerts](reference/monitoring/prometheus-alerts.md), [Prometheus metrics](reference/monitoring/prometheus-metrics.md), [Loki logs](reference/monitoring/loki-logs.md)
+- __Security and cryptography:__ [Hardening guidelines](reference/hardening.md), [Cryptography](explanation/cryptography.md), [Key rotation](explanation/key-rotation.md)
+- __Performance:__ [Benchmarks](reference/performance.md)
+- __Reliability and availability:__ [High availability](explanation/high-availability.md), [Reboot timing](explanation/reboot-timing.md)
+
+### Reference and Community
+
+- __Reference:__ [Glossary](reference/glossary.md)
+- __Contribute:__ [Contribute to documentation](contributing/documentation.md), [Contribute to code](contributing/code.md)
 
 ## How this documentation is organized
 

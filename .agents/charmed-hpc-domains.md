@@ -67,10 +67,10 @@ operations, storage, and release information):
 - Storage: storage concepts; `PLACEHOLDER` shared storage reference.
 - Lifecycle: end-to-end deployment walkthrough / Terraform plan reference; accounting &
   fair-share; scale the cluster; upgrade & update.
-- Operating well: login nodes & user access; TLS / certificate & secrets management; backup &
-  disaster recovery.
+- Performance and Quality: login nodes & user access; TLS / certificate & secrets management;
+  backup & disaster recovery.
 - Support: troubleshooting & diagnostics; FAQ.
-- Reference & community: release notes / changelog.
+- Reference and Community: release notes / changelog.
 
 (current-domain-set)=
 
@@ -81,36 +81,35 @@ currently in the repository. It is the result of analyzing and understanding the
 and it stands on its own as an accurate view of the present documentation. Slices that would
 exist only to hold not-yet-written pages are omitted here.
 
-### Band A — Getting going *(points of entry)*
+### Band A — Point of Entry
 
 1. **Getting started**
    - `getting-started.md`
 
-### Band B — The cluster stack *(stack layers and core machinery)*
+### Band B — Lifecycle *(lifecycle stages)*
 
-2. **Architecture & foundations**
-   - `reference/underlying-projects-and-dependencies.md`
-3. **Running workloads**
-   - `howto/run-workloads/use-apptainer.md`
-   - `howto/integrate/integrate-with-apptainer.md`
-4. **Accelerators & high-performance hardware** *(features)*
-   - `explanation/gpus.md`, `reference/gpus.md`
-   - `explanation/interconnects.md`, `reference/interconnects.md`
-   - `reference/performance.md`
-
-### Band C — Lifecycle *(lifecycle stages)*
-
-5. **Provision & deploy** *(intrinsic cluster setup)*
+2. **Provision & deploy** *(intrinsic cluster setup)*
    - `howto/initialize-cloud-environment.md`
    - `howto/deploy/deploy-slurm.md`
    - `howto/deploy/deploy-shared-filesystem.md`
-6. **Manage & operate** *(day-two operations)*
+3. **Manage & operate** *(day-two operations)*
    - `howto/manage/manage-slurm.md`
-7. **Decommission & clean up**
+4. **Decommission & clean up**
    - `howto/cleanup/cleanup-slurm.md`
    - `howto/cleanup/cleanup-cloud-resources.md`
 
-### Band D — Operating well *(qualities to uphold)*
+### Band C — Stack layers and core machinery
+
+5. **Architecture & foundations**
+   - `reference/underlying-projects-and-dependencies.md`
+6. **Running workloads**
+   - `howto/run-workloads/use-apptainer.md`
+   - `howto/integrate/integrate-with-apptainer.md`
+7. **Hardware** *(features)*
+   - `explanation/gpus.md`, `reference/gpus.md`
+   - `explanation/interconnects.md`, `reference/interconnects.md`
+
+### Band D — Performance and Quality
 
 8. **Identity & access**
    - `howto/deploy/deploy-identity-provider.md`
@@ -124,19 +123,21 @@ exist only to hold not-yet-written pages are omitted here.
     - `reference/hardening.md`
     - `explanation/cryptography.md`
     - `explanation/key-rotation.md`
-11. **Reliability & availability**
+11. **Performance** *(quality)*
+    - `reference/performance.md`
+12. **Reliability & availability**
     - `explanation/high-availability.md`
     - `explanation/reboot-timing.md`
 
-### Band E — Reference & community
+### Band E — Reference and Community
 
-12. **Reference**
+13. **Reference**
     - `reference/glossary.md`
-13. **Contribute**
+14. **Contribute**
     - `contributing/code.md`
     - `contributing/documentation.md`
 
-The current set covers all **32** current content pages across **5 bands → 13 slices**. Its
+The current set covers all **32** current content pages across **5 bands → 14 slices**. Its
 structure differs deliberately from the ideal set below:
 
 - **Troubleshooting & support** is not a standalone slice here. Its only current page,
@@ -156,52 +157,51 @@ structure differs deliberately from the ideal set below:
 *The documentation the product should eventually have.* This is the generative plan: it takes
 the current set above and extends it with the content an HPC platform's documentation should
 include but currently lacks. Proposed pages are marked `NEW`, and reserved stubs `PLACEHOLDER`,
-so this register never blurs with the current one. The structure grows to **5 bands → 17 slices**.
+so this register never blurs with the current one. The structure grows to **5 bands → 18 slices**.
 
-### Band A — Getting going *(points of entry)*
+### Band A — Point of Entry
 
 1. **Getting started**
    - `getting-started.md`
    - `NEW` Second tutorial: run and monitor a real workload
 
-### Band B — The cluster stack *(stack layers and core machinery)*
+### Band B — Lifecycle *(lifecycle stages)*
 
-2. **Architecture & foundations**
-   - `reference/underlying-projects-and-dependencies.md`
-   - `NEW` Architecture explanation (converged machine-plane / K8s-control-plane)
-   - `NEW` Requirements & supported platforms
-3. **Running workloads**
-   - `howto/run-workloads/use-apptainer.md`
-   - `howto/integrate/integrate-with-apptainer.md`
-   - `NEW` Software environment / modules
-   - `NEW` Data staging & management
-4. **Shared storage** *(thin slice, expected to grow)*
-   - `NEW` Storage concepts (Ceph/CephFS, `filesystem-client`)
-   - `PLACEHOLDER` Shared storage reference
-5. **Accelerators & high-performance hardware** *(features)*
-   - `explanation/gpus.md`, `reference/gpus.md`
-   - `explanation/interconnects.md`, `reference/interconnects.md`
-   - `reference/performance.md`
-
-### Band C — Lifecycle *(lifecycle stages)*
-
-6. **Provision & deploy** *(intrinsic cluster setup)*
+2. **Provision & deploy** *(intrinsic cluster setup)*
    - `howto/initialize-cloud-environment.md`
    - `howto/deploy/deploy-slurm.md`
    - `howto/deploy/deploy-shared-filesystem.md`
    - `NEW` End-to-end deployment walkthrough / Terraform deployment-plan reference
-7. **Manage & operate** *(day-two operations)*
+3. **Manage & operate** *(day-two operations)*
    - `howto/manage/manage-slurm.md`
    - `NEW` Accounting & fair-share (`sacct`, `sacctmgr`, limits)
-8. **Scale & maintain**
+4. **Scale & maintain**
    - `NEW` Scale the cluster (add/remove compute nodes)
-9. **Upgrade & update**
+5. **Upgrade & update**
    - `NEW` Upgrade & update the cluster
-10. **Decommission & clean up**
+6. **Decommission & clean up**
     - `howto/cleanup/cleanup-slurm.md`
     - `howto/cleanup/cleanup-cloud-resources.md`
 
-### Band D — Operating well *(qualities to uphold)*
+### Band C — Stack layers and core machinery
+
+7. **Architecture & foundations**
+   - `reference/underlying-projects-and-dependencies.md`
+   - `NEW` Architecture explanation (converged machine-plane / K8s-control-plane)
+   - `NEW` Requirements & supported platforms
+8. **Running workloads**
+   - `howto/run-workloads/use-apptainer.md`
+   - `howto/integrate/integrate-with-apptainer.md`
+   - `NEW` Software environment / modules
+   - `NEW` Data staging & management
+9. **Shared storage** *(thin slice, expected to grow)*
+   - `NEW` Storage concepts (Ceph/CephFS, `filesystem-client`)
+   - `PLACEHOLDER` Shared storage reference
+10. **Hardware** *(features)*
+    - `explanation/gpus.md`, `reference/gpus.md`
+    - `explanation/interconnects.md`, `reference/interconnects.md`
+
+### Band D — Performance and Quality
 
 11. **Identity & access**
     - `howto/deploy/deploy-identity-provider.md` *(add-on)*
@@ -217,20 +217,22 @@ so this register never blurs with the current one. The structure grows to **5 ba
     - `explanation/cryptography.md`
     - `explanation/key-rotation.md`
     - `NEW` TLS / certificate & secrets management
-14. **Reliability, availability & recovery**
+14. **Performance** *(quality)*
+    - `reference/performance.md`
+15. **Reliability, availability & recovery**
     - `explanation/high-availability.md`
     - `NEW` Backup & recovery
-15. **Troubleshooting & support**
+16. **Troubleshooting & support**
     - `explanation/reboot-timing.md`
     - `NEW` Troubleshooting & diagnostics
     - `NEW` FAQ
 
-### Band E — Reference & community
+### Band E — Reference and Community
 
-16. **Reference**
+17. **Reference**
     - `reference/glossary.md`
     - `NEW` Release notes / changelog
-17. **Contribute**
+18. **Contribute**
     - `contributing/code.md`
     - `contributing/documentation.md`
 

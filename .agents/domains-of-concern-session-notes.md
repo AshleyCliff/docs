@@ -110,9 +110,15 @@ The above decisions were threaded back into both documents:
 - **Editing pass.** Removed redundancy in the current-vs-ideal material (it had been restated in
   several places), unified terminology to "current map"/"ideal map," and rewrote the intro to
   preview the document's full contents.
-- **Charmed HPC document.** Split the single proposed structure into an explicit **Actual domain
+- **Charmed HPC document.** Split the single proposed structure into an explicit **Current domain
   set** (existing pages only, reading as complete) and an **Ideal domain set** (existing plus
   proposed `NEW`/`PLACEHOLDER` pages).
+- **Home-page implementation.** Applied the current domain set to the root `index.md` "In this
+  documentation" section: the five bands as sub-headings and the thirteen slices as linked bullets,
+  pointing at the existing pages. The Diátaxis directory structure and the "How this documentation
+  is organized" section were left intact — the domains are an added thematic navigation layer, not
+  a reorganization of files. The Contribute slice links directly to the documentation and code
+  contribution pages rather than the `contributing/` landing page.
 
 ## Outcomes
 
@@ -129,7 +135,6 @@ The above decisions were threaded back into both documents:
 
 ## Open follow-ups (not yet actioned)
 
-- Draft the `index.md` toctree(s) expressing the chosen structure.
 - Prioritize the proposed `NEW` pages into a build order.
 - Optionally align the Charmed HPC document's "Actual/Ideal" headings with the general document's
   "current map"/"ideal map" wording for exact parity.
