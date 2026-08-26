@@ -100,8 +100,10 @@ document:
 The above decisions were threaded back into both documents:
 
 - **Coverage audit.** Found and fixed one unplaced page (`cleanup-cloud-resources`); confirmed the
-  `manage-slurm` anchors are sections, not missing pages; verified all 32 content pages are
-  represented once (10 landing pages excluded).
+  `manage-slurm` anchors were sections, not missing pages, at the time of the audit; verified all
+  content pages are represented once (landing pages excluded). `manage-slurm` has since been split
+  into topic-based pages, so those anchors now live on separate pages placed in the slices matching
+  their topics.
 - **Lifecycle band added.** Introduced a dedicated Lifecycle grouping band, then refined its
   membership as the discussions above resolved.
 - **General document.** Wove the sharpened concepts into `domains-of-concern.md`, added the

@@ -13,7 +13,7 @@ Charmed HPC is a platform for managing high-performance computing clusters. It a
 ### Lifecycle
 
 - __Provision and deploy:__ [Initialize cloud environment](howto/initialize-cloud-environment.md); [Deploy Slurm](howto/deploy/deploy-slurm.md); [Deploy shared filesystem](howto/deploy/deploy-shared-filesystem.md)
-- __Manage and operate:__ [Manage Slurm](howto/manage/manage-slurm.md)
+- __Manage and operate:__ [Manage compute nodes and partitions](howto/manage/manage-compute-nodes.md); [Rotate Slurm authentication keys](howto/manage/rotate-slurm-keys.md); [Migrate a single slurmctld unit to high availability](howto/manage/migrate-slurmctld-to-high-availability.md)
 - __Decommission and clean up:__ [Clean up Slurm](howto/cleanup/cleanup-slurm.md); [Clean up cloud resources](howto/cleanup/cleanup-cloud-resources.md)
 
 ### Stack layers and core machinery

@@ -37,20 +37,24 @@ Legend used in the ideal set:
 
 ## Coverage audit
 
-- **42** Markdown files exist across the documentation directories.
+- **44** Markdown files exist across the documentation directories.
 - **10** `index.md` landing pages are excluded per the coverage rule (the pattern is expressed
   on them).
-- **32** content pages must each be represented exactly once.
+- **34** content pages must each be represented exactly once.
 
 Findings:
 
 - **Gap found and fixed.** `howto/cleanup/cleanup-cloud-resources.md` was initially unplaced. It
   is the teardown counterpart to `howto/initialize-cloud-environment.md` and now sits in the
   **Decommission & clean up** slice.
-- **Not missing.** The `howto-manage-*` reference anchors (rotate keys, node state, partitions,
-  transition to high availability, and so on) are **sections within `manage-slurm.md`**, not
-  separate files, so they are not counted as gaps.
-- With the fix applied, all **32** content pages are placed exactly once.
+- **Since split into pages.** The `howto-manage-*` anchors were originally sections within a
+  single `manage-slurm.md`. That page has been split by topic into
+  `howto/manage/manage-compute-nodes.md`, `howto/manage/rotate-slurm-keys.md`, and
+  `howto/manage/migrate-slurmctld-to-high-availability.md`, with the job-notification sender
+  name section folded into `howto/integrate/integrate-with-email.md`. Each new page is placed
+  in the slice matching its topic, so key rotation and high availability now sit in the quality
+  slices alongside their explanations rather than in **Manage & operate**.
+- With the fix applied, all **34** content pages are placed exactly once.
 
 ## Gaps identified
 
@@ -93,7 +97,7 @@ exist only to hold not-yet-written pages are omitted here.
    - `howto/deploy/deploy-slurm.md`
    - `howto/deploy/deploy-shared-filesystem.md`
 3. **Manage & operate** *(day-two operations)*
-   - `howto/manage/manage-slurm.md`
+   - `howto/manage/manage-compute-nodes.md`
 4. **Decommission & clean up**
    - `howto/cleanup/cleanup-slurm.md`
    - `howto/cleanup/cleanup-cloud-resources.md`
@@ -120,12 +124,14 @@ exist only to hold not-yet-written pages are omitted here.
    - `reference/monitoring/grafana-dashboards.md`, `prometheus-alerts.md`,
      `prometheus-metrics.md`, `loki-logs.md`
 10. **Security & cryptography**
+    - `howto/manage/rotate-slurm-keys.md`
     - `reference/hardening.md`
     - `explanation/cryptography.md`
     - `explanation/key-rotation.md`
 11. **Performance** *(quality)*
     - `reference/performance.md`
 12. **Reliability & availability**
+    - `howto/manage/migrate-slurmctld-to-high-availability.md`
     - `explanation/high-availability.md`
     - `explanation/reboot-timing.md`
 
@@ -137,7 +143,7 @@ exist only to hold not-yet-written pages are omitted here.
     - `contributing/code.md`
     - `contributing/documentation.md`
 
-The current set covers all **32** current content pages across **5 bands → 14 slices**. Its
+The current set covers all **34** current content pages across **5 bands → 14 slices**. Its
 structure differs deliberately from the ideal set below:
 
 - **Troubleshooting & support** is not a standalone slice here. Its only current page,
@@ -173,7 +179,7 @@ so this register never blurs with the current one. The structure grows to **5 ba
    - `howto/deploy/deploy-shared-filesystem.md`
    - `NEW` End-to-end deployment walkthrough / Terraform deployment-plan reference
 3. **Manage & operate** *(day-two operations)*
-   - `howto/manage/manage-slurm.md`
+   - `howto/manage/manage-compute-nodes.md`
    - `NEW` Accounting & fair-share (`sacct`, `sacctmgr`, limits)
 4. **Scale & maintain**
    - `NEW` Scale the cluster (add/remove compute nodes)
@@ -213,6 +219,7 @@ so this register never blurs with the current one. The structure grows to **5 ba
     - `reference/monitoring/grafana-dashboards.md`, `prometheus-alerts.md`,
       `prometheus-metrics.md`, `loki-logs.md`
 13. **Security & cryptography**
+    - `howto/manage/rotate-slurm-keys.md`
     - `reference/hardening.md`
     - `explanation/cryptography.md`
     - `explanation/key-rotation.md`
@@ -220,6 +227,7 @@ so this register never blurs with the current one. The structure grows to **5 ba
 14. **Performance** *(quality)*
     - `reference/performance.md`
 15. **Reliability, availability & recovery**
+    - `howto/manage/migrate-slurmctld-to-high-availability.md`
     - `explanation/high-availability.md`
     - `NEW` Backup & recovery
 16. **Troubleshooting & support**
@@ -238,7 +246,7 @@ so this register never blurs with the current one. The structure grows to **5 ba
 
 ## Coverage confirmation
 
-- **Current set** — all **32** current content pages are placed exactly once across **5 bands →
+- **Current set** — all **34** current content pages are placed exactly once across **5 bands →
   13 slices**; the **10** `index.md` landing pages are excluded per the coverage rule.
-- **Ideal set** — the same **32** pages plus the `NEW` pages and **1** `PLACEHOLDER`, across
+- **Ideal set** — the same **34** pages plus the `NEW` pages and **1** `PLACEHOLDER`, across
   **5 bands → 17 slices**.
