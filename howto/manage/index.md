@@ -1,8 +1,10 @@
+(howto-manage-index)=
 # Manage your cluster
 
 Administer a Charmed HPC cluster after initial deployment, from routine compute node operations to cluster-wide changes that require a maintenance window.
 
 - {ref}`howto-manage-compute-nodes`
+- {ref}`howto-manage-users-and-groups`
 - {ref}`howto-manage-rotate-slurm-keys`
 - {ref}`howto-manage-single-slurmctld-to-high-availability`
 
@@ -12,6 +14,7 @@ Administer a Charmed HPC cluster after initial deployment, from routine compute 
 :hidden:
 
 Manage compute nodes and partitions <manage-compute-nodes>
+Manage users and groups <manage-users-and-groups>
 Rotate authentication keys <rotate-authentication-keys>
 Migrate Slurm controller to high availability <migrate-slurmctld-to-high-availability>
 :::
