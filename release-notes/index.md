@@ -38,5 +38,5 @@ Only the set of versions listed in a single release's release notes is tested to
 :maxdepth: 1
 :hidden:
 
-1.0-rc <1.0-rc>
+1.0-rc1 <1.0-rc>
 :::
